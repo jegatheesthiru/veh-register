@@ -1,0 +1,38 @@
+#declaring list
+list1 = []
+#printing numbers upto 9999
+for i in range (1,10_000):
+    sum = 0
+    n = 0
+    tot_sum = 0
+    n = i
+#to find sum of 4 numbers(gives sum in 2 nos)
+    while i != 0 :
+        sum = sum + i%10
+        i = i //10
+#to find sum of 2 nos
+    while sum != 0:
+        tot_sum = tot_sum + sum%10
+        sum = sum // 10
+#checking whether sum = 8 0r not
+#if sum != 8 the numbers will be added to list1
+    if tot_sum != 8:
+        list1.append(n)
+#initializing the   ASCII value for "A" as 65
+a = 65
+for k in range(1,27):
+    for j in list1:
+        print("TN 78  %c  %04d" %(chr(a),j))
+    a = a+1
+#the above line will display only the single character
+#to display double character the below code is used
+b = 65
+c = 65
+for l in range(1,27):
+    b = 65
+    for m in range(1,27):
+        for n in list1:
+            print("TN 78  %c%c  %04d" %(chr(c),chr(b),n))
+        b = b+1
+    c = c+1
+#end of the program!!!!!!!!!!
